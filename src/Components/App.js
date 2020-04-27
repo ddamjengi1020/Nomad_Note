@@ -12,7 +12,7 @@ function App() {
         <Route path={"/"} exact component={Notes} />
         <Route path={"/add"} component={Add} />
         <Route path={"/:id"} exact component={Note} />
-        <Route path={"/:id/Edit"} component={Edit} />
+        <Route path={"/edit/:id"} component={Edit} />
       </Switch>
     </Router>
   );

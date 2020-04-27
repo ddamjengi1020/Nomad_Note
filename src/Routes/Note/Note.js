@@ -17,7 +17,23 @@ const Title = styled.h1`
   padding: 0;
 `;
 
-const Button = styled.button``;
+const Button = styled.button`
+  display: block;
+  border: 3px solid black;
+  background-color: transparent;
+  padding: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  outline: none;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+`;
 
 const Content = styled.div``;
 
@@ -35,7 +51,7 @@ export default class Note extends React.Component {
             <>
               <TitleComponent>
                 <Title>{data.note && data.note.title}</Title>
-                <Link to={`/${data.note.id}/edit`}>
+                <Link to={`/edit/${data.note.id}`}>
                   <Button>Edit</Button>
                 </Link>
               </TitleComponent>

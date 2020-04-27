@@ -34,3 +34,11 @@ export const EDIT_NOTE = gql`
     }
   }
 `;
+
+export const DEL_NOTE = gql`
+  mutation delNote($id: Int!) {
+    delNote(id: $id) @client {
+      id
+    }
+  }
+`;

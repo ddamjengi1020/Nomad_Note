@@ -13,7 +13,7 @@ export default class Edit extends React.Component {
     return (
       <Query query={GET_NOTE} variables={{ id: Number(id) }}>
         {({ data }) =>
-          data.note ? (
+          data && data.note ? (
             <Mutation mutation={EDIT_NOTE}>
               {(editNote) => {
                 this.editNote = editNote;

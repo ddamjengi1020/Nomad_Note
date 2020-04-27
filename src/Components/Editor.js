@@ -34,7 +34,23 @@ const TitleContainer = styled.div`
   margin-bottom: 50px;
 `;
 
-const Button = styled.button``;
+const Button = styled.button`
+  display: block;
+  border: 3px solid black;
+  background-color: transparent;
+  padding: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  outline: none;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+`;
 
 export default class Editor extends React.Component {
   constructor(props) {
